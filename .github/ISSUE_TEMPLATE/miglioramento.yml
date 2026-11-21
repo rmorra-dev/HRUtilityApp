@@ -1,0 +1,41 @@
+name: "🛠️ Miglioramento di un'utility esistente"
+description: Un'idea per rendere più utile o più comoda una utility già presente.
+title: "[Miglioramento] "
+labels: ["miglioramento"]
+body:
+  - type: markdown
+    attributes:
+      value: "**Non inserire dati reali** di dipendenti, aziende o clienti: usa solo valori di fantasia."
+  - type: dropdown
+    id: utility
+    attributes:
+      label: Utility interessata
+      options:
+        - Calcolo IRPEF
+        - Detrazioni lavoro dipendente
+        - Split file CSV
+        - Costo del lavoro
+        - Portale / aspetto generale
+    validations:
+      required: true
+  - type: input
+    id: versione
+    attributes:
+      label: Versione in uso
+      description: La trovi in basso nel portale (es. 1.0).
+    validations:
+      required: true
+  - type: textarea
+    id: proposta
+    attributes:
+      label: Cosa vorresti poter fare
+      description: Descrivi la situazione in cui oggi ti manca qualcosa e cosa cambierebbe.
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Riservatezza
+      options:
+        - label: Confermo di non aver inserito dati personali reali.
+          required: true
