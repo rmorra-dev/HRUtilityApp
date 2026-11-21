@@ -1,0 +1,74 @@
+name: "💡 Proposta di nuova utility"
+description: Hai un'idea per un nuovo strumento? Raccontacela.
+title: "[Proposta] "
+labels: ["proposta"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Grazie! Più la proposta è concreta, più è facile valutarla.
+        **Non inserire dati reali** di dipendenti, aziende o clienti: usa solo valori di fantasia.
+  - type: input
+    id: titolo
+    attributes:
+      label: Nome dell'utility
+      description: Un nome breve, es. "Calcolo ratei ferie e permessi".
+    validations:
+      required: true
+  - type: textarea
+    id: problema
+    attributes:
+      label: Problema da risolvere
+      description: Cosa devi fare e come lo fai oggi (a mano, Excel, altro)? Quanto tempo ti porta via?
+    validations:
+      required: true
+  - type: textarea
+    id: input
+    attributes:
+      label: Dati in ingresso
+      description: Quali informazioni hai a disposizione e in che formato (campi da compilare, file, ecc.).
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Risultato atteso
+      description: Cosa vorresti ottenere (un numero, un file, un report, un controllo).
+    validations:
+      required: true
+  - type: textarea
+    id: esempio
+    attributes:
+      label: Esempio con numeri di fantasia
+      description: Un caso completo con il risultato corretto che ti aspetti.
+  - type: input
+    id: norma
+    attributes:
+      label: Riferimento normativo (se esiste)
+      description: Legge, circolare INPS/Agenzia delle Entrate, articolo di CCNL.
+  - type: dropdown
+    id: utente
+    attributes:
+      label: Chi la userebbe
+      options:
+        - Consulente del lavoro / studio
+        - Ufficio paghe aziendale
+        - Altro
+    validations:
+      required: true
+  - type: dropdown
+    id: frequenza
+    attributes:
+      label: Con che frequenza ti servirebbe
+      options:
+        - Ogni giorno
+        - Ogni settimana
+        - Ogni mese
+        - Alcune volte l'anno
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Riservatezza
+      options:
+        - label: Confermo di non aver inserito dati personali reali.
+          required: true
