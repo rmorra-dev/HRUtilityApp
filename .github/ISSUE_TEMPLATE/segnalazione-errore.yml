@@ -1,0 +1,63 @@
+name: "🐞 Segnala un errore"
+description: Un risultato che non torna, un messaggio strano, qualcosa che non funziona.
+title: "[Errore] "
+labels: ["errore"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Grazie per la segnalazione! **Non inserire dati reali** di dipendenti, aziende o clienti: riproduci il caso con valori di fantasia.
+  - type: input
+    id: versione
+    attributes:
+      label: Versione del programma
+      description: La trovi in basso nel portale (es. 1.0).
+    validations:
+      required: true
+  - type: dropdown
+    id: utility
+    attributes:
+      label: Utility
+      options:
+        - Calcolo IRPEF
+        - Detrazioni lavoro dipendente
+        - Split file CSV
+        - Costo del lavoro
+        - Portale / aggiornamenti / guida
+    validations:
+      required: true
+  - type: textarea
+    id: inserito
+    attributes:
+      label: Cosa hai inserito (valori di fantasia)
+      description: Anno, importi, opzioni selezionate, tipo di file…
+    validations:
+      required: true
+  - type: textarea
+    id: ottenuto
+    attributes:
+      label: Risultato ottenuto
+    validations:
+      required: true
+  - type: textarea
+    id: atteso
+    attributes:
+      label: Risultato atteso e come lo hai verificato
+      description: Altro software paghe, calcolo manuale, circolare o articolo di legge.
+    validations:
+      required: true
+  - type: dropdown
+    id: windows
+    attributes:
+      label: Versione di Windows
+      options:
+        - Windows 11
+        - Windows 10
+        - Altra
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Riservatezza
+      options:
+        - label: Confermo di non aver inserito dati personali reali.
+          required: true
