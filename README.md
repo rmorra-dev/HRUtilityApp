@@ -3,10 +3,10 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/rmorra-dev/HRUtilityApp/releases/latest"><img alt="Ultima versione" src="https://img.shields.io/github/v/release/rmorra-dev/HRUtilityApp?label=ultima%20versione&color=4F46E5"></a>
+  <a href="https://github.com/GITHUB_UTENTE/HRUtilityApp/releases/latest"><img alt="Ultima versione" src="https://img.shields.io/github/v/release/GITHUB_UTENTE/HRUtilityApp?label=ultima%20versione&color=4F46E5"></a>
   <img alt="Windows 10 e 11" src="https://img.shields.io/badge/Windows-10%20%7C%2011-0078D4">
   <img alt="Lingua italiano" src="https://img.shields.io/badge/lingua-italiano-2EA043">
-  <a href="https://github.com/rmorra-dev/HRUtilityApp/issues/new/choose"><img alt="Proposte benvenute" src="https://img.shields.io/badge/proposte-benvenute-8B5CF6"></a>
+  <a href="https://github.com/GITHUB_UTENTE/HRUtilityApp/issues/new/choose"><img alt="Proposte benvenute" src="https://img.shields.io/badge/proposte-benvenute-8B5CF6"></a>
 </p>
 
 # HR Utility App
@@ -26,6 +26,7 @@ Nasce dall'esperienza sul campo e cresce con le idee di chi la usa: **se ti manc
 - [Le utility](#le-utility)
 - [Come si presenta](#come-si-presenta)
 - [Scarica e installa](#scarica-e-installa)
+- [Licenza](#licenza)
 - [Aggiornamenti](#aggiornamenti)
 - [I tuoi dati restano tuoi](#i-tuoi-dati-restano-tuoi)
 - [Riferimenti normativi](#riferimenti-normativi)
@@ -76,23 +77,34 @@ Prende un file CSV e lo **divide in più file** in base alla colonna scelta: pri
 
 ### 4. Costo del lavoro
 
-Calcola il **costo annuo di un dipendente** per l'azienda a partire dagli elementi di paga che inserisci, con il dettaglio di ogni elemento di costo e **report PDF** finale.
+Calcola il **costo annuo di un dipendente** per l'azienda a partire dagli elementi di paga che inserisci, con il dettaglio di ogni elemento di costo e **report finale in PDF o Word**.
 
 <p align="center"><img src="images/costo_calcolo.png" alt="Calcolo del costo del lavoro" width="95%"></p>
 
-- **Elementi di paga dinamici**: aggiungi le voci che ti servono (da catalogo o libere), mensili o annuali, e indica se sono imponibili, se concorrono al TFR e se maturano 13ª/14ª.
-- **Aliquote per ogni elemento di costo**, salvate e modificabili (contributi, INAIL, TFR, importi fissi…), adattabili a settore e CCNL.
-- **Report PDF** con dettaglio, riepilogo e **le tue note**.
+- **Elementi di paga\Voci dinamici**: aggiungi le voci che ti servono (da catalogo o libere), mensili o annuali. Per le voci mensili indichi **il numero di mensilità** (proposto 12; 13, 14… voce per voce): l'importo viene moltiplicato per le mensilità della riga.
+- **Voci fuori lordo**, come i *fringe benefit*: non entrano nel lordo né nel costo, ma **aumentano gli imponibili** che indichi (contributivo, TFR, basi tue).
+- **Aliquote per ogni elemento di costo**, salvate e modificabili, in **% o in ‰** (il tasso INAIL è per mille): aggiungi quante aliquote vuoi (contributi, TFR, INAIL, fondi, enti bilaterali, importi fissi…).
+- **Basi imponibili tue**: oltre a imponibile, lordo e base TFR puoi creare una base come **somma algebrica di alcune voci** (per esempio «lordo − premio + fringe benefit») e applicarvi un'aliquota.
+- **Report in PDF o Word**, a tua scelta, con dettaglio, basi, riepilogo e **le tue note**.
 - **Calcoli salvati**: li richiami quando vuoi, anche dopo mesi, ritrovando dati e aliquote dell'epoca.
 
 <table>
 <tr>
-<td width="50%"><img src="images/costo_aliquote.png" alt="Aliquote e parametri"><br><sub>Aliquote e parametri</sub></td>
+<td width="50%"><img src="images/costo_aliquote.png" alt="Aliquote e parametri"><br><sub>Aliquote: base di calcolo e unità (% o ‰)</sub></td>
+<td width="50%"><img src="images/costo_basi.png" alt="Basi imponibili libere"><br><sub>Basi imponibili create da te</sub></td>
+</tr>
+<tr>
 <td width="50%"><img src="images/costo_salvati.png" alt="Calcoli salvati"><br><sub>Calcoli salvati</sub></td>
+<td width="50%"><img src="images/costo_base_dialogo.png" alt="Definizione di una base"><br><sub>Come si definisce una base</sub></td>
 </tr>
 </table>
 
-<p align="center"><img src="images/report_pdf.png" alt="Report PDF del costo del lavoro" width="40%"><br><sub>Il report PDF (dati di esempio)</sub></p>
+<table>
+<tr>
+<td width="50%" align="center"><img src="images/report_pdf.png" alt="Report PDF del costo del lavoro"><br><sub>Report PDF (dati di esempio)</sub></td>
+<td width="50%" align="center"><img src="images/report_word.png" alt="Report Word del costo del lavoro"><br><sub>Lo stesso report in Word</sub></td>
+</tr>
+</table>
 
 > ⚠️ Le aliquote contributive predefinite sono **indicative**: vanno verificate e adattate al proprio caso prima dell'uso professionale.
 
@@ -103,19 +115,33 @@ Calcola il **costo annuo di un dipendente** per l'azienda a partire dagli elemen
 <p align="center"><img src="images/portale.png" alt="Il portale HR Utility" width="85%"></p>
 
 - **Portale a icone**: una card per ogni utility, con ricerca rapida.
-- **Tema chiaro e moderno** (con tema scuro opzionale).
+- **Tema chiaro e moderno**, in un grigio riposante per l'uso prolungato (con tema scuro opzionale).
+- **Codice a 3 lettere** su ogni card (IRP, DET, CSV, CDL): identifica il modulo nella licenza.
 - **Guida integrata** apribile con un clic.
 - Ogni utility si apre in una **finestra propria**: puoi tenerne aperte più di una.
 
 ## Scarica e installa
 
-1. Apri la pagina **[Releases](https://github.com/rmorra-dev/HRUtilityApp/releases/latest)**.
+1. Apri la pagina **[Releases](https://github.com/GITHUB_UTENTE/HRUtilityApp/releases/latest)**.
 2. Scarica **`HRUtility_Setup_<versione>.exe`** (installer) oppure lo **zip portatile**.
 3. Avvia l'installer: non servono diritti di amministratore. Troverai HR Utility nel menu Start.
 
 **Requisiti:** Windows 10 o 11 a 64 bit.
 
 > 🛡️ Se Windows mostra *«Windows ha protetto il PC»*: clic su **Ulteriori informazioni → Esegui comunque**. Succede con le applicazioni non ancora riconosciute da Microsoft. Scarica il programma solo da questa pagina.
+
+## Licenza
+
+L'uso di HR Utility è regolato da una **licenza con scadenza e per moduli**: ogni utility ha un codice di 3 caratteri e la licenza abilita i moduli scelti fino alla data di scadenza.
+
+<p align="center"><img src="images/licenza.png" alt="Finestra Licenza" width="55%"></p>
+
+- **Attivazione semplice**: pulsante *Licenza…* in basso nel portale, incolla il testo ricevuto (o carica il file `.lic`) e premi *Attiva licenza*. Funziona **senza Internet**.
+- **Moduli**: quelli non inclusi sono segnalati sulla card come *«Non incluso nella licenza»*; ampliare la licenza è sufficiente per abilitarli.
+- **Scadenza**: nei 30 giorni precedenti il portale mostra i giorni residui. A licenza scaduta i moduli si bloccano ma **i tuoi dati restano intatti** e tornano disponibili con il rinnovo.
+- Per ottenere, ampliare o rinnovare una licenza scrivi tramite [focus-lavoro.it](https://focus-lavoro.it).
+
+<p align="center"><img src="images/portale_licenza.png" alt="Portale con licenza parziale" width="80%"></p>
 
 ## Aggiornamenti
 
@@ -133,7 +159,7 @@ Dati e impostazioni si conservano quando si installa una nuova versione.
 
 ## I tuoi dati restano tuoi
 
-Tutto funziona **sul tuo computer**: i calcoli, i file e i report non vengono inviati da nessuna parte. Scaglioni modificati, aliquote, calcoli salvati e impostazioni sono nella cartella `%APPDATA%\HRUtility` del tuo profilo Windows (incollala in Esplora risorse).
+Tutto funziona **sul tuo computer**: i calcoli, i file e i report non vengono inviati da nessuna parte. Scaglioni modificati, aliquote, basi imponibili, calcoli salvati, licenza e impostazioni sono nella cartella `%APPDATA%\HRUtility` del tuo profilo Windows (incollala in Esplora risorse).
 
 - **Backup:** copia quella cartella con il programma chiuso.
 - **Ripristino / altro PC:** rimettila allo stesso posto.
@@ -172,10 +198,10 @@ HR Utility App ha **quattro utility oggi, ma l'obiettivo è averne molte di più
 
 | Cosa | Come |
 |---|---|
-| 💡 **Proporre una nuova utility** | [Apri una proposta](https://github.com/rmorra-dev/HRUtilityApp/issues/new?template=proposta-utility.yml): descrivi il problema, i dati che hai in mano e il risultato che vorresti |
-| 🛠️ **Migliorare una utility esistente** | [Suggerisci un miglioramento](https://github.com/rmorra-dev/HRUtilityApp/issues/new?template=miglioramento.yml) |
-| 🐞 **Segnalare un errore o un risultato diverso dal tuo software paghe** | [Segnala un errore](https://github.com/rmorra-dev/HRUtilityApp/issues/new?template=segnalazione-errore.yml), con fonte normativa se possibile |
-| 💬 **Discutere, votare le idee, condividere un caso d'uso** | [Discussioni](https://github.com/rmorra-dev/HRUtilityApp/discussions) |
+| 💡 **Proporre una nuova utility** | [Apri una proposta](https://github.com/GITHUB_UTENTE/HRUtilityApp/issues/new?template=proposta-utility.yml): descrivi il problema, i dati che hai in mano e il risultato che vorresti |
+| 🛠️ **Migliorare una utility esistente** | [Suggerisci un miglioramento](https://github.com/GITHUB_UTENTE/HRUtilityApp/issues/new?template=miglioramento.yml) |
+| 🐞 **Segnalare un errore o un risultato diverso dal tuo software paghe** | [Segnala un errore](https://github.com/GITHUB_UTENTE/HRUtilityApp/issues/new?template=segnalazione-errore.yml), con fonte normativa se possibile |
+| 💬 **Discutere, votare le idee, condividere un caso d'uso** | [Discussioni](https://github.com/GITHUB_UTENTE/HRUtilityApp/discussions) |
 | ⭐ **Far conoscere il progetto** | Lascia una stella al repository e passalo a colleghi e studi |
 
 ### Una buona proposta contiene
@@ -205,17 +231,21 @@ Le proposte più richieste e meglio descritte passano in testa alla lista. Maggi
 
 ## Domande frequenti
 
-**Funziona senza Internet?** Sì. Internet serve solo per il controllo facoltativo delle nuove versioni.
+**Funziona senza Internet?** Sì, anche l'attivazione della licenza. Internet serve solo per il controllo facoltativo delle nuove versioni.
+
+**Cosa succede quando la licenza scade?** I moduli si bloccano, i dati restano sul tuo computer e tornano utilizzabili appena attivi una licenza rinnovata.
+
+**Come si indicano 13ª e 14ª nel costo del lavoro?** Nella riga di ogni voce mensile imposti il numero di mensilità (12, 13, 14…): l'importo viene moltiplicato per quel numero.
 
 **I miei dati vengono inviati da qualche parte?** No. Tutto resta sul tuo computer (vedi [I tuoi dati restano tuoi](#i-tuoi-dati-restano-tuoi)).
 
-**Il risultato differisce di pochi centesimi dal mio software paghe. Perché?** Spesso dipende dal modo di arrotondare i rapporti nelle formule di detrazione. La guida spiega i passaggi, così puoi confrontarli. Se pensi sia un errore, [segnalalo](https://github.com/rmorra-dev/HRUtilityApp/issues/new?template=segnalazione-errore.yml).
+**Il risultato differisce di pochi centesimi dal mio software paghe. Perché?** Spesso dipende dal modo di arrotondare i rapporti nelle formule di detrazione. La guida spiega i passaggi, così puoi confrontarli. Se pensi sia un errore, [segnalalo](https://github.com/GITHUB_UTENTE/HRUtilityApp/issues/new?template=segnalazione-errore.yml).
 
 **Posso usarlo su più PC dello studio?** Sì: ogni PC ha i propri dati. Per portare scaglioni, aliquote e calcoli salvati su un altro PC copia la cartella descritta sopra.
 
 **Esiste per Mac o Linux?** Al momento solo Windows 10/11.
 
-**Quando esce l'aggiornamento con le nuove regole fiscali?** Gli scaglioni IRPEF e le aliquote del costo del lavoro li aggiorni da solo nel programma; le regole delle detrazioni arrivano con le nuove versioni, annunciate in [Releases](https://github.com/rmorra-dev/HRUtilityApp/releases).
+**Quando esce l'aggiornamento con le nuove regole fiscali?** Gli scaglioni IRPEF e le aliquote del costo del lavoro li aggiorni da solo nel programma; le regole delle detrazioni arrivano con le nuove versioni, annunciate in [Releases](https://github.com/GITHUB_UTENTE/HRUtilityApp/releases).
 
 ---
 
@@ -223,13 +253,13 @@ Le proposte più richieste e meglio descritte passano in testa alla lista. Maggi
 
 | Versione | Contenuto |
 |---|---|
-| **1.0** | Prima versione: portale con tema chiaro e controllo della versione; Calcolo IRPEF 2024-2026; Detrazioni lavoro dipendente; Split file CSV; Costo del lavoro con report PDF e archivio calcoli; guida PDF. |
+| **1.0** | Prima versione: portale con tema chiaro e controllo della versione; licenza a moduli con scadenza; Calcolo IRPEF 2024-2026; Detrazioni lavoro dipendente; Split file CSV; Costo del lavoro (mensilità per voce, voci fuori lordo, basi imponibili libere, aliquote in % e ‰, report PDF o Word, archivio calcoli); guida PDF. |
 
 ---
 
 ## Autore e contatti
 
 Un progetto di **[focus-lavoro.it](https://focus-lavoro.it)**, piattaforma per HR manager e consulenti del lavoro.
-Per idee, segnalazioni e domande usa le [Issues](https://github.com/rmorra-dev/HRUtilityApp/issues) e le [Discussioni](https://github.com/rmorra-dev/HRUtilityApp/discussions) di questo repository.
+Per idee, segnalazioni e domande usa le [Issues](https://github.com/GITHUB_UTENTE/HRUtilityApp/issues) e le [Discussioni](https://github.com/GITHUB_UTENTE/HRUtilityApp/discussions) di questo repository.
 
 <sub>HR Utility App è uno strumento indipendente e non è affiliato ad alcun produttore di software paghe. Tutti i marchi citati appartengono ai rispettivi proprietari.</sub>
